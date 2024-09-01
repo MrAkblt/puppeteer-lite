@@ -10,8 +10,8 @@ RUN apt-get install -y libasound2 libatk-bridge2.0-0 libatk1.0-0 libc6 libcairo2
   --no-install-recommends && rm -rf /var/lib/apt/lists/*
 
 RUN wget https://storage.googleapis.com/chrome-for-testing-public/128.0.6613.86/linux64/chrome-headless-shell-linux64.zip -O /tmp/chrome-headless-shell-linux64.zip \
-  && unzip /tmp/chrome-headless-shell-linux64.zip -d / && rm /tmp/chrome-headless-shell-linux64.zip && ln -s /chrome-headless-shell-linux64/chrome-headless-shell /usr/bin/chromium
+  && unzip /tmp/chrome-headless-shell-linux64.zip -d / && rm /tmp/chrome-headless-shell-linux64.zip && ln -s /chrome-headless-shell-linux64/chrome-headless-shell /usr/bin/chrome
   
 #RUN npm i -g @puppeteer/browsers
 #RUN npx @puppeteer/browsers install chrome-headless-shell@128.0.6613.86
-#RUN ln -s /chrome-headless-shell/linux-128.0.6613.86/chrome-headless-shell-linux64/chrome-headless-shell /usr/bin/chromium
+#RUN ln -s /chrome-headless-shell/linux-128.0.6613.86/chrome-headless-shell-linux64/chrome-headless-shell /usr/bin/chrome
